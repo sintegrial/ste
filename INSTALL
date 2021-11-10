@@ -1,0 +1,86 @@
+STE - Installation from sources
+================================================================================
+
+Building in Linux
+--------------------------------------------------------------------------------
+1. Download the sources from the STE website (ste-[version]-src.zip).
+
+2. Unpack the archive into the temporary directory (i.e. /tmp/ste).
+	Lets name it further STE_ROOT.
+
+3. Make sure that gcc package is installed.
+
+4. Make sure that the following development packages are installed:
+	- libqt4 >= 4.6.0
+	- libiconv >= 1.9 (can be found in cxxtools package as well)
+	- libenca >= 1.13
+
+5. (Optional) You can additionally install the following packages:
+	- astyle >= 1.24
+    - csstidy
+    - htmltidy (can be named just as 'tidy' as well)
+
+6. (Optional) For any libraries which are not in the default path, open the
+	STE_ROOT/ste.pro file and fix appropriate path(es) in the unix
+	section.
+
+7. Go to STE_ROOT and type in the console:
+	qmake
+	make
+
+	(or, open the ste.pro file in the Qt Creator & perform the build).
+
+	This will start building of STE. If there were no errors, you should get
+	ste file in the STE_ROOT directory.
+
+8. Type in the console:
+	sudo make install
+
+	You will be prompted for the root password. Afterwards, this will install
+	STE into the system.
+
+
+
+Building in Windows
+--------------------------------------------------------------------------------
+1. Download the sources from the STE website (ste-[version]-src.zip).
+
+2. Unpack the archive into the temporary directory (i.e. c:/tmp/ste).
+	Lets name it further STE_ROOT.
+
+3. Make sure that MinGW32 package is installed.
+
+4. Make sure that the following development packages are installed:
+	- Qt >= 4.6.0
+	- iconv >= 1.9
+
+	By default, it is expected that these packages are put into
+	../STE_ROOT/Libs directory, but you can have them everywhere you wish. In
+	this case, please follow p.5.
+
+5. (Optional) For any libraries which are not in ../STE_ROOT/Libs directory,
+	open the STE_ROOT/ste.pro file and fix appropriate path(es) in the
+	win32 section.
+
+6. Go to STE_ROOT and type in the console:
+	qmake
+	mingw32-make
+
+	(or, open the ste.pro file in the Qt Creator & perform the build).
+
+	This will start building of STE. If there were no errors, you should get
+	ste.exe file in the STE_ROOT/bin directory.
+
+
+
+Troubleshooting
+--------------------------------------------------------------------------------
+Q: While building, I'm getting errors like:
+
+stylemanager.o: In function `StyleManager::doCreateLexer(int)':
+stylemanager.cpp:(.text+0x2f4b): undefined reference to `QsciLexerASM::QsciLexerASM(QObject*)'
+stylemanager.cpp:(.text+0x36e9): undefined reference to `QsciLexerNSIS::QsciLexerNSIS(QObject*)'
+...
+
+A: You should remove or disable any previous Qscintilla installations before the
+build.

@@ -1,0 +1,108 @@
+.default
+color 0x000000
+paper 0xffffff
+
+.caret_line
+color 0x000000
+paper 0xd0e9e9
+
+.selection
+color 0xffffff
+paper 0x6666ff
+
+.lines_margin
+color 0x666666
+paper 0xf0f0f0
+
+.fold_margin
+color 0xf9f9f9
+paper 0xf9f9f9
+
+.fold_markers
+color 0x808080
+paper 0xeeffee
+
+.matched_brace
+color 0x00aa00
+paper 0xffff00
+
+.unmatched_brace
+color 0xff0000
+paper 0xffff00
+
+.indent_guides
+color 0xcccccc
+paper 0xffffff
+
+.edge
+color 0x999999
+
+
+
+.comment
+color 0x999999
+italic
+
+.comment_dox
+color 0x666666
+.comment_dox_keyword
+color 0x999999
+.comment_dox_bad
+color 0xff0000
+
+.number
+color 0x990099
+
+.string
+color 0x009900
+
+.badstring
+color 0xff0000
+
+.char
+color 0x006600
+
+.var1
+color 0x333333
+
+.var2
+color 0x990000
+
+.var3
+color 0x009999
+
+.var4
+color 0x999900
+
+.operator
+color 0x000099
+bold
+
+.keyword1
+color 0x0000ff
+bold
+
+.keyword2
+color 0x003366
+bold
+
+.keyword3
+color 0x660000
+
+.keyword4
+color 0x666600
+
+.define
+color 0x996600
+
+.user1
+color 0x0000ff
+
+.user2
+color 0x006633
+
+.user3
+color 0x660000
+
+.user4
+color 0x666600

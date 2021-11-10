@@ -1,0 +1,267 @@
+S.T.E. - Sintegrial Text Editor
+
+version 0.4.0
+
+Official website:
+  http://ste.sintegrial.com
+
+--------------------------------------------------------------------------------
+CREDITS
+
+created by: Sintegrial, 2010
+  http://sintegrial.com
+
+partner of: Industrial Infosystems
+  http://ii-system.com
+partner of: XlabSoft
+  http://xlabsoft.com
+
+Thanks to the authors of the free software and graphic resources used in
+project.
+
+--------------------------------------------------------------------------------
+3RD PARTY SOFTWARE & RESOURCES
+
+- Qt framework from Nokia <http://qt.nokia.com>
+- Qscintilla from Riverbank Computing <http://www.riverbankcomputing.co.uk>
+- Scintilla <http://www.scintilla.org>
+- iconv <http://www.gnu.org>
+- Artistic Style <http://astyle.sourceforge.net>
+- Uncrustify <http://uncrustify.sourceforge.net>
+- enca
+- OpenDesktop project <http://opendesktop.org>
+
+--------------------------------------------------------------------------------
+LICENSE
+
+This software is free and is distributed according to GPL and compatible
+licenses.
+
+Full text of GPL and more you can read here:
+  http://www.fsf.org/licensing/licenses/gpl.html
+
+--------------------------------------------------------------------------------
+ABOUT STE
+
+S.T.E. is easy-to-use and feature-rich plain text editor, which is available for
+different platforms.
+
+S.T.E. is based on Qt framework from Nokia and Qscintilla component from
+Riverbank Computing. Also it uses free resources from OpenDesktop.org project.
+
+More info can be found on the official website:
+  http://ste.sintegrial.com
+
+--------------------------------------------------------------------------------
+SUPPORTED PLATFORMS
+
+Since S.T.E. is based on Qt4/Qscintilla frameworks, all the platforms supported
+by them should be able to build and launch the software.
+
+In particular:
+- MS Windows 7, Vista, XP
+- Linux
+- FreeBSD
+- OS/2, eComStation
+- BeOS, Haiku
+
+--------------------------------------------------------------------------------
+INSTALLATION
+
+Installation manual can be found on the official website.
+For the build steps, please see INSTALL file.
+
+--------------------------------------------------------------------------------
+CHANGELOG
+
+0.4.0
+
+- added Number Conversion feature (by Ctrl+Shift+N)
+- added quick commenting feature (by Ctrl+/)
+- added tag completion feature for XML and DSL style tags (by Ctrl+Enter)
+- added selection wrap feature (also by Ctrl+Enter)
+- added symbols table (unicode, hex, html)
+- added joining lines with any separator (by Ctrl+J)
+- added trimming of spaces between words
+- added syntax highlighting for Ada, Lisp, Haskell
+- added APIs for Ada and Lisp
+- added content preview for XDXF dictionary format
+
+- improved File Explorer (speed, navigation, usability)
+- faster startup
+- some GUI optimizations (more compact toolbars etc.)
+
+- fixed issue with extra symbols in search results window
+- fixed key code propagation issue
+- fixed issue with showing images for HTML preview
+- fixed issue with wrong restoring of the Search Bar's height
+- fixed issue with Paste after closing several tabs
+- fixed issue with moving current line up and down
+
+
+
+0.3.0
+
+- added external lexers for assembler language (experimental)
+	- added Z80 Assembler highlighting
+- added lexer for DSL dictionaries
+- added preview of the output for DSL and HTML formats
+- added Check and Russian translations
+
+- added autocompletion APIs for SQL, NSIS, Pascal
+- auto-assignment of highlighters by customizable filename filters
+- added Tool Manager
+- added Document Info window
+- autocompletion source can be chosen from configuration dialog
+- improved search:
+    - reorganized results window
+    - 25% speedup
+- added Fold All and Unfold All actions
+- improved empty lines trimming:
+	- added End-Of-Line symbols trimming
+	- reorganized toolbar
+- improved context menu of the editor
+
+- new GUI look
+- improved color schemes:
+	- some highlighting fixes
+	- added selection and folding margins coloring
+
+- Windows: fixed issue with auto-assignment of a lexer by file extension
+- fixes for CPP and other lexer
+- fixes for Explorer Bar
+- fixed issue with brace search
+- fixed issue with loading ASCII files
+- fixed issue with showing the current line after folding
+- fixed issue with copying file path from Explorer window
+- autocompletion fixes:
+    - Ctrl+Space invokes autocompletion list explicitly
+    - fixed issue with duplicates in the list when several data sources are used
+
+- changed build system to build with single qmake/make call
+
+
+
+0.2.2
+
+- added customizable syntax coloring
+
+- improved switching between tabs via Ctrl+Tab
+- improved TEX highlighter
+
+- fixed issue with Read Only attribute on non-writable filesystems
+- fixed issue with slowdown while search
+- fixed issues with INI, Verilog and CSS syntax highlighters
+- fixed issue with undo of brace autoindentation
+
+
+
+0.2.1
+
+- added syntax highlighters:
+	- x86 Assembler
+	- NSIS scripts
+- added autoindentation inside {} blocks
+- added color text markup
+- added external configurations for CSS Tidy and HTML Tidy
+
+- fixed issue with multicolor highlighting
+- fixed issue with tabs switching behavior
+- some search bar fixes
+- redesigned main menu
+- bottom bars made user-resizable
+
+
+
+0.2.0
+
+- Windows: codebase moved to Qt 4.6.2, Qscintilla 2.4.3
+
+- fixed issue with Show Indent button
+- fixed issue with auto-highlighting of the current text when folding is enabled
+- fixed issue with auto-indentation when changing current highlighting
+- auto-assignment of the highlighter when saving the document with another type
+- fixed issue with word deletion (by Alt+Del)
+- fixed Qscintilla issue with case-insensitive comparison
+
+- improved File Explorer (show by Alt+0)
+- improved Search (fixed crashes, added interactive results output)
+- added search in open files
+- redesigned sidebars
+- added auto-detection of the file's encoding (via enca)
+- added word formatting feature (by Ctrl+Shift+J)
+- added lines join shortcut (by Ctrl+J)
+- added storable sessions
+- added text wrap mode
+- double-color highlighting of the text similar to selected
+- added support of CSS Tidy and HTML Tidy
+- extended brace matching algorithm (now works inside blocks as well)
+- added selection between matched braces (by Ctrl+Shift+E)
+
+
+
+0.1.3
+
+- fixed issue with highlighting of the current selection
+- fixed issue with detection of changed and deleted files on the filesystem
+- fixed issue with Batch (MS Command Script) lexer
+- fixed issue with auto-invoke of Makefile lexer
+
+- added autocompletion APIs for C++, C#, Java, JavaScript, CSS, HTML, XML,
+	PHP, Perl, Python, VBScript
+- added autocompletion of the current line to the edge position (Ctrl+Shift+D)
+- added code formatting (AStyle, Uncrustify)
+- opening/saving a new file to the previously used directory
+- added storing files with or without BOM (for Unicode codec)
+- added storing of window and toolbars state
+- added handling Read Only attribute of the files
+- extended autoinsertion functionality
+- added option to trim extra spaces on saving
+- added option to add new line to the document on saving
+- redesigned Search Bar
+- added Active Windows list
+- added Shortcuts Bar
+- added Lines Trim Bar and extended trimming functionality
+- added Filesystem Explorer
+
+
+
+0.1.2
+
+- fixed issue with storing of recent files
+- fixed issue with default file path while opening
+- fixed issue with changing font for opened windows
+- fixed issue with saving as Unicode (added BOM writing)
+- fixed some other encoding issues
+- fixed some lexer extensions
+- fixed hiding of autocompletion window when loosing focus
+
+- added display of file modification date
+- added trimming empty lines
+- added jumping block up/down (by Ctrl+PageUp/PageDown)
+- added incremental search
+- added arrow folding style
+- added moving selection up/down (by Ctrl+Shift+Up/Down)
+- added zoom in/out via mouse wheel (with Ctrl pressed)
+- added check for opened files which were changed or removed from filesystem
+- added setup of default codec and EOLs
+
+
+
+0.1.1
+
+- fixed some bugs and styling issues
+- fixed Unicode search issues
+- fixed Shift-Tab handling
+
+- added autocompletion while typing
+- added base folding
+- more language highlightings (ASP, PHP, VBS, SGML)
+- added auto-insertion of paired symbols (quots, braces etc.)
+- added stripping of trailing spaces
+
+
+
+0.1.0
+
+- initial release
